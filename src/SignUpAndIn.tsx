@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import { useState } from "react";
 import SignInDialog from "./SignInDialog";
 import SignUpForm from "./SignUpForm";
@@ -20,7 +21,7 @@ const SignUpAndIn = () => {
   });
 
   return (
-    <div className="App">
+    <div css={{ width: "25vw", height: "auto" }}>
       {!signUpState.signIn ? (
         <SignUpForm signUpState={signUpState} setSignUpState={setSignUpState} />
       ) : (

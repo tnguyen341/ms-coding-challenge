@@ -21,7 +21,7 @@ const form = css({
 
 const formInput = css({
   borderRadius: "5px",
-  borderColor: "rgba(0,0,0,0.25)",
+  borderColor: "rgba(0,0,0,0.10)",
   marginBottom: "8px",
 });
 

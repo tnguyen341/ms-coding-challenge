@@ -1,11 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-interface SignInDialogProps {
-  fName: string;
-  email: string;
-}
-
 const box = css({
   display: "flex",
   flexDirection: "column",
@@ -38,6 +33,11 @@ const signInButton = css({
   backgroundColor: "red",
   color: "white",
 });
+
+interface SignInDialogProps {
+  fName: string;
+  email: string;
+}
 
 const SignInDialog = (props: SignInDialogProps) => {
   const { fName, email } = props;

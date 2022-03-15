@@ -81,7 +81,7 @@ const SignUpForm = (props: SignUpProps) => {
   };
 
   useEffect(() => {
-    fName.length > 0 && email.length > 0 && pw.length
+    fName.length > 0 && email.length > 0 && pw.length > 0
       ? setSignUpState((prevSignUpState) => ({
           ...prevSignUpState,
           signUpComplete: true,
@@ -103,20 +103,33 @@ const SignUpForm = (props: SignUpProps) => {
         </p>
         <form>
           <div css={{ display: "flex", flexDirection: "column" }}>
-            <label css={[text, label]}>First Name</label>
+            <label htmlFor="fName" css={[text, label]}>
+              First Name
+            </label>
             <input
               css={formInput}
               type="text"
               onChange={handleSetFname}
+              id="fName"
             ></input>
-            <label css={[text, label]}>Email Address</label>
+            <label htmlFor="email" css={[text, label]}>
+              Email Address
+            </label>
             <input
               css={formInput}
               type="text"
               onChange={handleSetEmail}
+              id="email"
             ></input>
-            <label css={[text, label]}>Password</label>
-            <input css={formInput} type="text" onChange={handleSetPW}></input>
+            <label htmlFor="pw" css={[text, label]}>
+              Password
+            </label>
+            <input
+              css={formInput}
+              type="password"
+              onChange={handleSetPW}
+              id="pw"
+            ></input>
           </div>
         </form>
         <div css={{ display: "flex", justifyContent: "flex-end" }}>
